@@ -9,7 +9,6 @@ select
 	(income)/1200 as "salários mínimos"
 from sales.customers 
 
-
 -- (Exercício 2) Na query anterior acrescente uma coluna informando TRUE se o cliente
 -- ganha acima de 5 salários mínimos e FALSE se ganha 4 salários ou menos.
 -- Chame a nova coluna de "acima de 4 salários"
@@ -20,11 +19,8 @@ select
 	((income) / 1200) > 4 as "acima de 4 salários"
 from sales.customers
 
-
-
 -- (Exercício 3) Na query anterior filtre apenas os clientes que ganham entre
 -- 4 e 5 salários mínimos. Utilize o comando BETWEEN
-
 select
 	email,
 	income,
@@ -42,7 +38,6 @@ where state in ('MT', 'MG')
 
 -- (Exercício 5) Selecine o email, cidade e estado dos clientes que não 
 -- moram no estado de São Paulo.
-
 select email, city, state
 from sales.customers
 where state Not in ('SP')
